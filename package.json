@@ -1,5 +1,5 @@
 {
-  "name": "qr.js",
+  "name": "qrcode.js",
   "version": "0.0.1",
   "description": "QR Code Detection / Decoding / Generation",
   "main": "index.js",
