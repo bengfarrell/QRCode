@@ -11,9 +11,6 @@ module.exports = {
   }
 
 , detect : function(im, cb){
-  console.log("Detect", im)
-  qrcode.process(im, cb);
-
-
+  qrcode.decode(im, cb);
   }
 }
