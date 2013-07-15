@@ -1,20 +1,4 @@
-var grid = require('./src/grid')
-  , version = require('./src/version')
-  , detector = require('./src/detector')
-  , formatinf = require('./src/formatinf')
-  , errorlevel = require('./src/formatinf')
-  , bitmat = require('./src/formatinf')
-  , datablock
-  , bmparser
-  , datamask
-  , rsdecoder
-  , gf256poly
-  , gf256
-  , decoder
-  , qrcode
-  , findpat
-  , alignpat
-  , databr
+var qrcode = require('./src/qrcode')
 
 
 module.exports = {
@@ -26,7 +10,10 @@ module.exports = {
 
   }
 
-, detect : function(im cb){
+, detect : function(im, cb){
+  console.log("Detect", im)
+  qrcode.process(im, cb);
+
 
   }
 }
