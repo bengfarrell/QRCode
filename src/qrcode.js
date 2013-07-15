@@ -1976,22 +1976,16 @@ qrcode.sizeOfDataLengthInfo =  [  [ 10, 9, 8, 8 ],  [ 12, 11, 16, 10 ],  [ 14, 1
 
 qrcode.callback = null;
 
-qrcode.decode = function(im, cb){	
-		qrcode.width = im.width;
-		qrcode.height = im.height;
-		qrcode.imagedata = im.getImageData(0, 0, qrcode.width, qrcode.height);
-    qrcode.result = qrcode.process(im, cb);
-    if(qrcode.callback!=null)
-      qrcode.callback(qrcode.result);
-		return qrcode.result;
-}
 
 qrcode.decode_utf8 = function ( s )
 {
   return decodeURIComponent( escape( s ) );
 }
 
-qrcode.process = function(ctx, cb){
+qrcode.process = function(im, cb){
+  qrcode.width = im.width;
+  qrcode.height = im.height;
+  qrcode.imagedata = im.getImageData(0, 0, qrcode.width, qrcode.height);
 	
 
 	var image = qrcode.grayScaleToBitmap(qrcode.grayscale());
