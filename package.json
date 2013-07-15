@@ -1,13 +1,13 @@
 {
-  "name": "qr",
-  "version": "0.0.0",
+  "name": "qr.js",
+  "version": "0.0.1",
   "description": "QR Code Detection / Decoding / Generation",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies" :{
-    "pngjs" : "0.4.0"
+  "devDependencies": {
+    "pngjs": "0.4.0"
   },
   "repository": {
     "type": "git",
