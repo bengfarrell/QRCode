@@ -1,3 +1,6 @@
+# Forked by Ben for some hackathoning - needed coordinate data of the QR code corner points, so simply changed
+the callback to pass in a bigger JSON data object
+
 # Javascript QR Codes
 
 Read and Generate QR codes in js - either in node, or in the browser with browserify.

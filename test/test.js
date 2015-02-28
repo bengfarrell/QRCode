@@ -13,6 +13,9 @@ fs.createReadStream('test-detect.png')
 
     qr.detect(im, function(err, data){
 
-      console.log("!!",err, data);
+      console.log("!!",err, data.data);
+
+      // get some points/locations
+      console.log(data.info.points[0].x, data.info.points[0].y);
     })
 })

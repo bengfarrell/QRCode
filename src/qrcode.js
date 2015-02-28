@@ -2015,9 +2015,9 @@ qrcode.process = function(im, cb){
 		for(var j=0;j<data[i].length;j++)
 			str+=String.fromCharCode(data[i][j]);
 	}
-	
-    
-	cb(null, qrcode.decode_utf8(str))
+
+
+	cb(null, { data: qrcode.decode_utf8(str), info: qRCodeMatrix });
 }
 
 qrcode.getPixel = function(x,y){
